@@ -28,7 +28,7 @@ int main()
                       }
      do
        {
-	    printf("\n\nDISK SCHEDULING ALGORITHMS\n1. FCFS\n2. SSTF\n3. SCAN\n4. C-SCAN\n5. LOOK\n6. C-LOOK");
+	    printf("\n\nDISK SCHEDULING ALGORITHMS\n1. FCFS\n2. SSTF\n3. SCAN");
         printf("\nEnter choice :");
         scanf("%d",&choice);
         count=0;
