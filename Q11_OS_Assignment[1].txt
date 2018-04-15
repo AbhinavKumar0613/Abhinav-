@@ -3,14 +3,14 @@ int absolute(int a,int b)
     {int c;
      c=a-b;
      if(c<0)
-            return -c;
+         return -c;
      else
          return c;
-         }
-
-
+    }
+    
 int main()
-    {int choice,m,n,x,start,i,j,pos,min,a[15],count;
+    {
+	 int choice,m,n,x,start,i,j,pos,min,a[15],count;
      count=0;
      printf("\nEnter the number of cylinders :");
      scanf("%d",&m);
@@ -27,13 +27,15 @@ int main()
                                   }
                       }
      do
-       {printf("\n\nDISK SCHEDULING ALGORITHMS\n1. FCFS\n2. SSTF\n3. SCAN\n4. C-SCAN\n5. LOOK\n6. C-LOOK");
+       {
+	    printf("\n\nDISK SCHEDULING ALGORITHMS\n1. FCFS\n2. SSTF\n3. SCAN\n4. C-SCAN\n5. LOOK\n6. C-LOOK");
         printf("\nEnter choice :");
         scanf("%d",&choice);
         count=0;
         x=start;
         switch(choice)
-                      {case 1:printf("\nFCFS :\n");
+                      {
+					  case 1:printf("\nFCFS :\n");
                               printf("Scheduling services the request in the order that follows:\n%d\t",start);
                               for(i=0;i<n;i++)
                                               {x-=a[i];
@@ -99,7 +101,18 @@ int main()
                                                  x=a[i];
                                                  printf("%d\t",x);
                                                  }
-                              /*for(i=0;i<n;i++)
-                                              printf("%d\t",a[i]);*/
-                              printf("\nTotal Head Movement: %d Cylinders",count);
-                              break;              
+                              for(i=0;i<n;i++)
+                              {
+                              printf("%d\t",a[i]);
+                              }
+							  printf("\nTotal Head Movement: %d Cylinders",count);
+                              break;
+                }
+                          
+                          
+            }
+		while(choice == 0);
+		{
+			printf("invalid input");
+		}
+	}
